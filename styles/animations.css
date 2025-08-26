@@ -1,11 +1,90 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
 
-*/
+.sparks {
+  opacity: 0;
+}
+
+.core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: var(--accent-color);
+  transition: fill .3s linear;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--main-color);
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--main-color);
+  transition: fill .3s linear 0.05s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--main-color);
+  transition: fill .3s linear;
+}
+
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill .3s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill .3s linear 0.05s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill .3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill .3s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill .3s ease-in 0.06s;
+}
+
+.like-icon.is-liked .heart-full-body {
+  animation: scale .3s ease-in .1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: opacity-anim .3s ease-in .3s;
+}
+
+.like-icon .contour {
+  fill: var(--contour-color);
+  transition: fill .1s linear;
+}
+
+
+@keyframes scale {
+  to {
+    scale: 1;
+  } from {
+    scale: 1.25;
+  }
+}
+
+@keyframes opacity-anim {
+  0% {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+}
