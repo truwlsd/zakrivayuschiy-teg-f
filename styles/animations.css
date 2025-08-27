@@ -59,6 +59,7 @@
 
 .like-icon.is-liked .heart-full-body {
   animation: scale .3s ease-in .1s;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {

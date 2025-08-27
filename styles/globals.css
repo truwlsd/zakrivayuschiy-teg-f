@@ -1,4 +1,4 @@
-
+*,
 *::after,
 *::before {
   box-sizing: border-box;
@@ -25,7 +25,7 @@ li {
 }
 
 h1 {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-variation-settings: var(--main-weight-card);
   font-size: var(--main-title-fs);
 }
@@ -48,7 +48,7 @@ img {
 button {
   border: none;
   font-family: var(--accent-font-family), sans-serif;
-  font-variation-settings: 'wdth' var(--main-af-weight-card);
+  font-variation-settings: 'wdth' var(--main-weight-card);
   background-color: transparent;
   cursor: pointer;
 }

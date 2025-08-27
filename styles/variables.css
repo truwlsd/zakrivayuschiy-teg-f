@@ -4,7 +4,8 @@
   --main-font-family: "Inter";
   --accent-font-family: "PressStart2P";
   --main-weight-card: 400;
-  --weight-title-card: 700;
+  --weight-subtitle-card: 410;
+  --weight-title-card: 715;
 
   --main-max-width: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
   --main-title-fs: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
@@ -19,11 +20,10 @@
   --background-grid-color: #d3d3d3;
   --background-gradient-start: #e7e7e7;
   --background-gradient-end: #1a1a1a;
-  --background-url: url('../images/background.png');
-  --background-image: var(--background-url), linear-gradient(to bottom, var(--background-gradient-start) 0.01%, var(--background-gradient-end) 100%),
-    repeating-linear-gradient(to bottom, var(--background-grid-color) 2px, transparent 2px),
-    repeating-linear-gradient(to right, var(--background-grid-color) 2px, transparent 2px);
-  
-  
+  --background-image:  repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 0 4px ),
+    repeating-linear-gradient(0deg,#d3d3d3 0 2px, transparent 0 4px ),
+    linear-gradient(180deg, #e7e7e7 0.01%, #e7e7e7 1%, 
+      #1a1a1a 100% 
+    );
 }
 

@@ -29,7 +29,7 @@
 }
 
 .header__subtitle {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
   text-transform: uppercase;
 }
@@ -61,70 +61,42 @@
 .card__title {
   padding-inline: 10px;
   padding-block: 4px 6px;
-  font-family: var(--main-font-family);
   font-size: var(--second-title-fs);
   font-variation-settings: "wdth" var(--weight-title-card);
 }
 
 .label {
-  position: relative;
-}
-
-.label-html::before {
-  content: "</HTML>";
-}
-
-.label-css::before {
-  content: "<css>";
-}
-
-.label-desigions::before {
-  content: "<desigions>";
-}
-
-.label-care::before {
-  content: "care";
-}
-
-.label-support::before {
-  content: "<support>";
-}
-
-.label-lifes-style::before {
-  content: "<lifes-style: none;>";
-}
-
-.label-experience::before {
-  content: "<experience>";
-}
-
-
-.label::before {
   position: absolute;
   top: 25px;
   right: 13px;
   z-index: 1;
   opacity: .5;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-weight: 400;
   font-size: 14px;
-  text-shadow: 1px 1px var(--accent-color);
+  text-shadow: 1px 1px var(--accent-color);position: absolute;
 }
 
-@supports (text-stroke: 0.5px var(--accent-color)) {
-  .label::before {
+
+@supports (-webkit-text-stroke: 0.4px var(--accent-color)) or 
+          (text-stroke: 0.4px var(--accent-color)) {
+  .label {
     text-shadow: none;
-    text-stroke: 0px 5px var(--accent-color);
+    -webkit-text-stroke: 0.4px var(--accent-color);
+    text-stroke: 0.4px var(--accent-color);
   }
 }
 
 .card__imgbox {
+  position: relative;
   width: 100%;
   max-width: clamp(23.188rem, 16.035rem + 30.52vw, 43.5rem);
   max-height: clamp(23.188rem, 16.035rem + 30.52vw, 43.5rem);
 }
 
 .card__image {
+  object-fit: cover;
+  object-position: center center;
   width: 100%;
   max-width: 100%;
 }
@@ -173,8 +145,7 @@
 
 .card__text p {
   line-height: 1.18;
-  font-family: var(--main-font-family);
-  font-variation-settings: "wdth" var(--main-weight-card);
+  font-variation-settings: "wdth" var(--weight-subtitle-card);
 }
 
 .card__like {
@@ -190,6 +161,7 @@
   overflow: hidden;
   color: var(--accent-color);
   background-color: var(--accent-color);
+  transition: box-shadow .3s ease;    
 }
 
 .button__text {
@@ -197,7 +169,9 @@
   z-index: 1;
   color: var(--accent-color);
   mix-blend-mode: difference;
+
 }
+
 
 .floopy-svg {
   position: relative;
@@ -212,7 +186,6 @@
 .button:focus {
   box-shadow: 2px 2px 0px var(--main-color);
   outline: none;
-  transition: box-shadow .3s ease;
 }
 
 .button::after {
@@ -230,6 +203,12 @@
 
 .button:hover::after {
   transform: translateX(0);
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__like-button {
@@ -289,7 +268,7 @@
 }
 
 .dialog__text {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
