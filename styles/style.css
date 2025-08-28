@@ -60,7 +60,7 @@
   padding-inline: 10px;
   padding-block: 4px 6px;
   font-size: var(--second-title-fs);
-  font-variation-settings: "wdth" var(--weight-title-card);
+  font-variation-settings: 'wght' var(--weight-title-card);
 }
 
 .label {
@@ -142,7 +142,7 @@
 
 .card__text p {
   line-height: 1.18;
-  font-variation-settings: "wdth" var(--weight-subtitle-card);
+  font-variation-settings: 'wght' var(--weight-subtitle-card);
 }
 
 .card__like {
